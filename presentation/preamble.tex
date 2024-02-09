@@ -1,0 +1,117 @@
+% cSpell:disable
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usefonttheme[onlymath]{serif}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{relsize} % Used to define \bitem
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{media9}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{amsmath, nccmath}
+\usepackage{multirow}
+
+
+% Visualization
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage{tkz-euclide}
+\usepackage[american]{circuitikz}
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+%%% Some TikZ options
+\tikzstyle{every picture}+=[remember picture]
+% \everymath{\displaystyle}
+\newcommand{\tbx}[2]{\tikz[baseline]{\node[fill=#1,rectangle, rounded corners=2mm, anchor=base] (t1){$#2$};}}
+\newcommand{\tbxh}[4]{\tikz[baseline]{\node[fill=#1,rectangle, text depth=#2, text height=#3, rounded corners=2mm, anchor=base] (t2){$#4$};}}
+\newcommand{\ttbx}[2]{\tikz[baseline]{\node[fill=#1,rectangle, rounded corners=2mm, anchor=base] (t3) {#2};}}
+%%%
+
+% Custom colors
+\colorlet{royalblue}{blue!80!gray!80!green}
+\colorlet{customgreen}{green!70!blue!70!gray}
+\colorlet{navyblue}{blue!70!green!90!white}
+\colorlet{redorange}{orange!60!red!70!gray}
+
+% Set theme colors
+\setbeamercolor{title}{fg=royalblue,bg=white}
+\setbeamercolor{block title}{fg=royalblue,bg=white}
+\setbeamercolor{frametitle}{fg=royalblue,bg=white}
+\setbeamercolor{navigation symbols}{fg=royalblue,bg=royalblue!70}
+\setbeamercolor{bibliography entry author}{fg=royalblue}
+\setbeamercolor{bibliography entry location}{fg=royalblue}
+
+% Format itemize
+\setbeamercolor{itemize item}{fg=royalblue}
+\setbeamertemplate{itemize item}[circle]
+
+% Show only some of the navigation symbols
+\setbeamertemplate{navigation symbols}{\insertslidenavigationsymbol}
+% Show frame number after navigation symbols
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \raisebox{1.5pt}[0pt][0pt]{\insertframenumber}%/\inserttotalframenumber}
+}
+
+% Environment for formatting section title
+\newenvironment{centertitle}{%
+\begin{center}
+\Large \color{royalblue}%     
+}{%
+\normalsize \color{black}
+\end{center}%
+}
+
+% Display name of current ((sub)sub)section title
+\usepackage{zref-titleref}
+\makeatletter
+\newcommand*{\currentname}{\zref@getcurrent{title}}
+% or \newcommand*{\currentname}{\zref@titleref@current}
+\makeatother
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=royalblue,
+    filecolor=blue!20!purple,      
+    urlcolor=royalblue,
+    pdftitle={Ph.D. General Exam},
+    pdfauthor={Purnanand Elango},
+    citecolor=red!40!white!70!black,
+}
+
+% Colored bullet
+\newcommand{\bitem}{\item[{\color{royalblue}\relsize{3}-}]}
+
+% Control spacing between items in itemize and enumerate environments
+\newcommand{\itmsp}[1]{\setlength{\itemsep}{#1ex}}
+
+% Colored text
+\newcommand{\rtx}[1]{{\color{redorange}#1}}
+\newcommand{\btx}[1]{{\color{royalblue}#1}}
+
+% Math notation
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\opn}[1]{\operatorname{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+\newcommand{\behcetfull}{Beh\c{c}et~A\c{c}\i kme\c{s}e}
+
+% Footnote without marker
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+% cSpell:enable

@@ -3,7 +3,10 @@
 *.fls
 *.log
 *.synctex.gz
-homework.pdf
-test.pdf
+*.pdf
+*.nav
+*.out
+*.snm
+*.toc
 test.tex
 clean
