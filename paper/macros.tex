@@ -1,0 +1,13 @@
+% Math notation
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+% Comment box
+\usepackage{xcolor,calc}
+\newcommand{\colorNoteBox}[3]{
+	\begin{center}
+		\vspace{-2ex}\small
+		\fcolorbox[rgb]{#1}{#2}{\parbox[t]{\columnwidth-\parindent- 0.2cm}{\setlength{\parskip}{1.5ex}#3}}
+	\end{center}
+}
+\newcommand{\GCnote}[1]{\colorNoteBox{1,0,0}{0.9,0.9,0.9}{GC: #1}}
